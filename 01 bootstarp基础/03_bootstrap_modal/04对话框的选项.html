@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>对话框的选项</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#response-navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="" class="navbar-brand"><strong>blog</strong>.net</a>
+      </div>
+      <div class="collapse navbar-collapse" id="response-navbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="">课程</a></li>
+        <li><a href="">博客</a></li>
+        <li><a href="">手册</a></li>
+      </ul>
+      <form action="" class="navbar-form navbar-left">
+        <input type="text" placeholder="搜索" class="form-control">
+        <button type="submit">
+          <span class="glyphicon glyphicon-search"></span>
+        </button>
+      </form>
+      <a href="" class="btn btn-primary btn-sm navbar-btn navbar-right">订阅课程</a>
+      <div class="menu navbar-right">
+        <ul class="nav navbar-nav">
+          <li><a href="" data-toggle="modal" data-target="#login-modal">登录</a></li>
+          <li><a href="">注册</a></li>
+          <p class="navbar-text">您好，<a href="#" class="navbar-link">张三</a></p>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="login-modal" tabindex="-1">
+    <div class="moal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4>用户登录</h4>
+        </div>
+        <div class="modal-body">
+          <p>这里是对话框的主体内容</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary">登录</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <p class="alert alert-info">对话框的选项：
+      <br/> 包括显示对话框是否显示暗色背景、是否可以使用esc键退出等
+      <br/> 使用方法
+      <br/> 1、对话框可以使用data-选项名="false/true"来设置某选项是否可用
+      <br/> 1.1 暗色背景backdrop，data-backdrop="false"使打开对话框时没有暗色背景
+      <br/> 2 可以通过js实现:
+      <br/>
+    </p>
+  </div>
+  <script src="lib/jquery-3.3.1.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script>
+    $(function(){
+      $('#login-modal').modal({
+        show:false,  //对话框默认隐藏
+        backdrop: false,//关闭暗色背景
+        keyboard:false//关闭esc按钮的退出功能
+        //对话框还有个remote选项
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>编写对话框</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#response-navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="" class="navbar-brand"><strong>blog</strong>.net</a>
+      </div>
+      <div class="collapse navbar-collapse" id="response-navbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="">课程</a></li>
+        <li><a href="">博客</a></li>
+        <li><a href="">手册</a></li>
+      </ul>
+      <form action="" class="navbar-form navbar-left">
+        <input type="text" placeholder="搜索" class="form-control">
+        <button type="submit">
+          <span class="glyphicon glyphicon-search"></span>
+        </button>
+      </form>
+      <a href="" class="btn btn-primary btn-sm navbar-btn navbar-right">订阅课程</a>
+      <div class="menu navbar-right">
+        <ul class="nav navbar-nav">
+          <li><a href="">登录</a></li>
+          <li><a href="">注册</a></li>
+          <p class="navbar-text">您好，<a href="#" class="navbar-link">张三</a></p>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal in" style="display:block">
+    <div class="moal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close">&times;</button>
+          <h4>登录界面</h4>
+        </div>
+        <div class="modal-body">
+          <p>这里是对话框的主题内容</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary">登录</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-backdrop in"></div>
+  <div class="container">
+    <p class="alert alert-info">对话框：
+      <br/> 实际使用中，div标签不需要添加in类以及display:block的样式，
+      <br/> 打开对话框后会自动添加in类及可见样式，这里是为了观看
+      <br/> 实现思路：
+      <br/> 1、添加div标签，包含modal类
+      <br/> 2、div标签里边添加div标签，包含modal-dialog类
+      <br/> 3、在里边这个div标签继续添加div标签，包含modal-content类：定义了对话框的背景圆角阴影效果
+      <br/> 4、在最里边对话框的内容，包含头部、主体及页脚；
+      <br/> 4.1 头部使用div标签，包含modal-header类
+      <br/> 4.1.1 给头部添加标题用h4标签及关闭按钮，关闭按钮使用button包含close类以及文本内容是'&times'
+      <br/> 4.2 主体使用div标签，包含modal-body类，内容可以使用p标签
+      <br/> 4.3 页脚使用div标签，包含modal-footer类
+      <br/> 4.3.1 给页脚添加按钮button,包含btn,btn-primary类，文本内容是登录
+      <br/> 5、bootstrap提供了2个类可以改变对话框的大小modal-lg、modal-sm，默认不写是最大的，可以添加在modal-dialog类所在的div
+    </p>
+  </div>
+  <script src="lib/jquery-3.3.1.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+body {
+  padding-top: 51px;
+}
+
+img {
+  width: 100%;
+}
+
+.navbar-inverse input[type="text"] {
+  background-color: #313131;
+  border: none;
+  color: #999;
+}
+
+.navbar-inverse .navbar-form {
+  position: relative;
+}
+
+.navbar-inverse button[type="submit"] {
+  position: absolute;
+  top: 35%;
+  right: 20px;
+  background: none;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .navbar-inverse button[type="submit"] {
+    top: 23%;
+  }
+}
+
+.navbar-inverse .glyphicon {
+  color: #999;
+}
+
+.menu {
+  margin-right: 25px;
+}

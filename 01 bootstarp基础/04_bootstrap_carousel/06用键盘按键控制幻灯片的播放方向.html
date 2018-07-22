@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>用键盘按键控制幻灯片的播放</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#response-navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a href="" class="navbar-brand"><strong>blog</strong>.net</a>
+      </div>
+      <div class="collapse navbar-collapse" id="response-navbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="">课程</a></li>
+          <li><a href="">博客</a></li>
+          <li><a href="">手册</a></li>
+        </ul>
+        <form action="" class="navbar-form navbar-left">
+          <input type="text" placeholder="搜索" class="form-control">
+          <button type="submit">
+          <span class="glyphicon glyphicon-search"></span>
+        </button>
+        </form>
+        <a href="" class="btn btn-primary btn-sm navbar-btn navbar-right">订阅课程</a>
+        <div class="menu navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="" data-toggle="modal" data-target="#login-modal">登录</a></li>
+            <li><a href="">注册</a></li>
+            <p class="navbar-text">您好，<a href="#" class="navbar-link">张三</a></p>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="carousel slide" id="slideshow">
+      <ol class="carousel-indicators">
+        <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+        <li data-target="#slideshow" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <!-- <img src="holder.js/1200x500/auto/text:Bootstrap" alt="Bootstrap"> -->
+          <img src="images/shamo.jpg" alt="Bootstrap">
+        </div>
+        <div class="item">
+          <!-- <img src="holder.js/1200x500/auto/text:Javascript" alt="Javascript"> -->
+          <img src="images/yujinxiang.jpg" alt="Javascript">
+        </div>
+      </div>
+      <a href="#slideshow" class="left carousel-control" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a href="#slideshow" class="right carousel-control" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div>
+    <div class="text-center">
+      <div class="btn-group">
+        <button class="btn btn-default prev-slide">
+          <span class="glyphicon glyphicon-backward"></span>
+        </button>
+        <button class="btn btn-default play-and-stop">
+          <span class="glyphicon glyphicon-play"></span>
+        </button>
+        <button class="btn btn-default next-slide">
+          <span class="glyphicon glyphicon-forward"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="login-modal" tabindex="-1">
+    <div class="moal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4>用户登录</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="请输入Email">
+            </div>
+            <div class="form-group">
+              <label for="password">密码</label>
+              <input type="password" class="form-control" id="password" placeholder="请输入密码">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary">登录</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <p class="alert alert-info">用键盘按键控制幻灯片的播放：
+      <br/> 1、用$包装document对象，监听keydown事件
+      <br/> 2、利用e.which写swtich语句（写之前可以log出来左右键的e.which属性）
+    </p>
+  </div>
+  <script src="lib/jquery-3.3.1.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/holder.js"></script>
+  <script>
+    $(function() {
+      $('#login-modal').modal({
+        show: false, //对话框默认隐藏
+        backdrop: false, //关闭暗色背景
+        keyboard: false //关闭esc按钮的退出功能
+        //对话框还有个remote选项
+        // remote:'login-form.html'
+      });
+
+      $('.prev-slide').on('click', function() {
+        $('#slideshow').carousel('prev');
+      });
+      $('.next-slide').on('click', function() {
+        $('#slideshow').carousel('next');
+      });
+      $(document).on('keydown', function(e) {
+        console.log(e.which);
+        switch (e.which) {
+          case 37:
+            $('#slideshow').carousel('prev');
+            break;
+          case 39:
+            $('#slideshow').carousel('next');
+            break;
+          default:
+            break;
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
