@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <a href="" class="navbar-brand"><strong>blog</strong>.net</a>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="">课程</a></li>
+        <li><a href="">博客</a></li>
+        <li><a href="">手册</a></li>
+      </ul>
+      <form action="" class="navbar-form navbar-left">
+        <input type="text" placeholder="搜索" class="form-control">
+        <button type="submit">
+          <span class="glyphicon glyphicon-search"></span>
+        </button>
+      </form>
+    </div>
+
+  </nav>
+  <div class="container" style="height:1500px;">
+    <p class="alert alert-info">将导航栏固定起来的类有以下几个：<br/> navbar-fixed-top，固定在顶端，无论页面怎么滚动，始终显示在可见范围的最顶端
+      <br/> navbar-fixed-bottom,固定在底端
+      <br/> navbar-static-top，固定在顶端但会跟着页面滚动
+      <br/>
+    </p>
+    <p class="alert alert-info">提交按钮上可以使用bootstrap中的Glyphicons 字体图标图标：
+      <br/> 使用这些图标先用span标签，标签上添加glyphicon类
+      <br/> 同时添加上具体的某一个小图标的类，搜索图标的类是glyphicon-serach
+      <br/> 文本框加上form-control类
+      <br/> 导航栏上的表单，需要在form标签上添加nvabar-form，
+      <br/> 还有一个控制浮动的类navbar-left浮动到左边，navbar-right浮动到右边
+      <br/> 给表单添加自定义的样式，时其在暗色的导航栏上显示的更自然
+    </p>
+  </div>
+  <script src="lib/jquery-3.3.1.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

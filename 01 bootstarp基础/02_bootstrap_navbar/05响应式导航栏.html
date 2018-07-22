@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#response-navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="" class="navbar-brand"><strong>blog</strong>.net</a>
+      </div>
+      <div class="collapse navbar-collapse" id="response-navbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="">课程</a></li>
+        <li><a href="">博客</a></li>
+        <li><a href="">手册</a></li>
+      </ul>
+      <form action="" class="navbar-form navbar-left">
+        <input type="text" placeholder="搜索" class="form-control">
+        <button type="submit">
+          <span class="glyphicon glyphicon-search"></span>
+        </button>
+      </form>
+      <a href="" class="btn btn-primary btn-sm navbar-btn navbar-right">订阅课程</a>
+      <div class="menu navbar-right">
+        <ul class="nav navbar-nav">
+          <li><a href="">登录</a></li>
+          <li><a href="">注册</a></li>
+          <p class="navbar-text">您好，<a href="#" class="navbar-link">张三</a></p>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container" style="height:1500px;">
+    <p class="alert alert-info">响应式导航栏：
+      <br/> 小尺寸的设备上，导航栏上的内容菜单、搜索、按钮都会折叠在一块
+      <br/> 在窗口的右上角会显示一个按钮，点击这个按钮会把折叠起来的导航栏显示出来
+      <br/> 思路：
+      <br/> 1、使用div标签将要折叠的内容（导航栏）包装起来，添加collapse和navbar-collapse类和一个id(切换显示按钮需要使用)
+      <br/> 2、定义用来切换显示与隐藏的按钮button标签，添加navbar-toggle类，
+      <br/> 2.1 添加data-toggle属性，值是collapse,可以开启切换显示与折叠
+      <br/> 2.2 添加data-target属性，值是折叠的id（必须写#id）
+      <br/> 3、button里面添加图标：
+      <br/> 3.1 span标签，icon-bar类（是一条横线，这里需要3个）
+      <br/> 4、将按钮和导航栏标志(navbar-brand)放在一个div容器中，navbar-header
+    </p>
+  </div>
+  <script src="lib/jquery-3.3.1.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
