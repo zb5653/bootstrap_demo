@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Bootstrap响应式项目一</title>
+</head>
+
+<body>
+  <!-- 导航开始 -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- 小屏幕按钮和LOGO -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">麦子学院</a>
+      </div>
+
+      <!-- 导航 -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#home">首页</a></li>
+          <li><a href="#bbs">论坛</a></li>
+          <li><a href="#html5">前端开发</a></li>
+          <li><a href="#">最新课程</a></li>
+          <li><a href="#">移动APP</a></li>
+          <li><a href="#">联系我们</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+  <!-- 导航结束 -->
+
+  <!-- HOME开始 -->
+  <section id="home">
+    <div class="lvjing">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <!-- 前后2个col-md-1是为了中间显示的内容不与container所在容器的两边对齐 -->
+          <div class="col-md-10">
+            <h1>bootstrap实战项目等你来战</h1>
+            <p>
+              本课程适用于：1.WEB开发人员；2.网站维护人员、管理人员<br/> 培训技能的目标：使用bootstrap框架快速构建响应式网页，颠覆传统WEB前端
+              <img src="images/php.jpg" class="img-responsive" alt="php">
+            </p>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- HOME结束 -->
+  <!-- BBS开始 -->
+  <section id="bbs">
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <a href="https://www.baidu.com" target="_blank">
+        <img src="images/a.png" class="img-responsive" alt="百度">
+        <h3>Android开发</h3>
+        <p>Android开发技术交流、问题求助、实战案例分享</p>
+      </a></div>
+    <div class="col-md-4">
+      <a href="https://github.com/" target="_blank">
+        <img src="images/i.png" class="img-responsive" alt="GitHub">
+        <h3>IOS开发</h3>
+        <p>iOS开发技术交流，海量iOS实战干货分享</p>
+      </a></div>
+    <div class="col-md-4">
+      <a href="https://www.gulpjs.com.cn/" target="_blank">
+        <img src="images/b.png" class="img-responsive" alt="Gulp">
+        <h3>嵌入式底层开发</h3>
+        <p>底层嵌入式开发、实战案例等技术交流讨论</p>
+      </a></div>
+  </div>
+</div>
+  </section>
+  <!-- BBS结束 -->
+  <!-- HTML5开始 -->
+  <div class="container" id="html5">
+    <div class="row">
+      <div class="col-md-6">
+      <h2>HTML5前端开发</h2>
+      <p>一线资深前端开发工程师倾情打造！助你完成普通程序员到优秀工程师的华丽升级！</p>
+      <p><span class="glyphicon glyphicon-grain maizi-icon"></span>使用HTML5与CSS3技术轻松实现设备自适应展示。</p>
+      <p><span class="glyphicon glyphicon-grain maizi-icon"></span>清晰明了的语义代码结构，更高的可读性、更利于页面维护的。</p>
+      </div>
+      <div class="col-md-6">
+      <img src="images/html5.jpg" class="img-responsive" alt="HTML5">
+      </div>
+    </div>
+  </div>
+  <!-- HTML5结束 -->
+  <!-- Bootstrap开始 -->
+  <div class="container" id="bootstrap">
+    <div class="row">
+      <div class="col-md-6">
+      <img src="images/Bootstrap.jpg" class="img-responsive" alt="HTML5">
+      </div>
+      <div class="col-md-6">
+      <h2>Bootstrap实战视频教程</h2>
+      <p>Bootstrap 是最受欢迎的 HTML、CSS 和 JS 框架，用于开发响应式布局、移动设备优先的 WEB 项目。</p>
+      <p><span class="glyphicon glyphicon-grain maizi-icon"></span>你的网站和应用能在 Bootstrap 的帮助下通过同一份代码快速、有效适配手机、平板、PC 设备。</p>
+      <p><span class="glyphicon glyphicon-grain maizi-icon"></span>Bootstrap 提供了全面、美观的文档。你能在这里找到关于 HTML 元素、HTML 和 CSS 组件、jQuery 插件方面的所有详细文档。</p>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap结束 -->
+  <script src="lib/jquery-3.3.1.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
