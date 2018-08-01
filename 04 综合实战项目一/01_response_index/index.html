@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.css">
   <title>Bootstrap响应式项目一</title>
 </head>
 
@@ -46,7 +47,7 @@
   <section id="home">
     <div class="lvjing">
       <div class="container">
-        <div class="row">
+        <div class="row wow fadeInUp" data-wow-duration="5s" data-wow-delay="5s" data-wow-offset="30" data-wow-iteration="3">
           <div class="col-md-1"></div>
           <!-- 前后2个col-md-1是为了中间显示的内容不与container所在容器的两边对齐 -->
           <div class="col-md-10">
@@ -294,6 +295,24 @@
   </footer>
   <script src="lib/jquery-3.3.1.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/jquery.singlePageNav.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    $(function(){
+      /*导航跳转效果插件*/
+      $('.nav').singlePageNav({
+        offset:70
+      });
+
+      // 小屏幕导航点击以后自动关闭导航
+      $('.navbar-collapse a').click(function(){
+        $('.navbar-collapse').collapse('hide');
+      });
+
+      // wow.min.js初始化
+      new WOW().init();
+    });
+  </script>
 </body>
 
 </html>

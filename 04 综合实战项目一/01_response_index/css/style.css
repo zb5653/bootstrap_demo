@@ -195,7 +195,7 @@ body {
   background: url("../images/contact-bg.png");
   background-size: cover;
   color: #fff;
-  height: 500px;
+  /* height: 500px; */
 }
 #contact .contact_lvjing{
   width: 100%;
