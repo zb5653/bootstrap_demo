@@ -1,7 +1,29 @@
 body {
   font-family:
 }
-
+/* 进度条 */
+.progress {
+    margin-bottom: 15px;
+}
+/* 图片头像 */
+.wh_5050{
+    width: 50px;
+    height: 50px;
+}
+/* 按钮上边距 */
+.margin_top_12 {
+    margin-top: 12px;
+}
+/* page-header */
+.page-header{
+  margin:0 0 20px;
+}
+/* user_search */
+.user_search{
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    border-top: none;
+}
 /* footer */
 footer{
   font-weight: 500;
