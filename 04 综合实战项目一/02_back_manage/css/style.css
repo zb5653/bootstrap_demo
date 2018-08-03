@@ -24,6 +24,17 @@ body {
     padding: 10px 15px;
     border-top: none;
 }
+/* pull_center */
+.pull_center{
+  text-align: center;
+}
+/* tag */
+.alert_list{
+  padding: 15px 15px;
+}
+.alert_list .alert{
+  margin: 0 20px 0 0;
+}
 /* footer */
 footer{
   font-weight: 500;
